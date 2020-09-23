@@ -19,7 +19,7 @@ function modifImages() {
         console.log("Loading truck images ⛟⛟ ");
         while (x < champsBooleens.length) {
             if ((champsBooleens[x].attributes["data-field"].nodeValue == "need_delivery") && (champsBooleens[x].childNodes[0].checked == true)) {
-                champsBooleens[x].innerHTML = "<image src=\"https://signature.provelo.org/signature/images/camionnette.png\" height=12px>";
+                champsBooleens[x].innerHTML = "<div class=\"fa fa-fw fa-truck fa-flip-horizontal\" style=\"color:#ADD8E6; font-size:xx-large\"></div>";
             }
             x = x + 1;
         }
@@ -28,7 +28,6 @@ function modifImages() {
 
 };
 
-//setTimeout(modifImages,10000) //--> solution de base, on fait le travail une fois,  tout une fois - 10 seconde après le load
 
 
     modifImages();
