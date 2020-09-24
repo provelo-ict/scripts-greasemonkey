@@ -2,7 +2,7 @@
 //@namespace https://www.provelo.org/
 // @run-at context-menu
 // @name     FunkyTruckProVelo
-// @version  0.1.1
+// @version  0.1.3
 // @icon     https://www.provelo.org/favicon-32x32.png
 // @run-at document-idle
 // @description Shows wonderful trucks if a delivery is due for the Odoo activity
