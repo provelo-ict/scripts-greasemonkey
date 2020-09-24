@@ -4,6 +4,8 @@
 // @name     FunkyTruckProVelo
 // @version  0.1.1
 // @icon     https://www.provelo.org/favicon-32x32.png
+// @run-at document-idle
+// @description Shows wonderful trucks if a delivery is due for the Odoo activity
 // @match    https://gestion.provelo.org/*
 // @match    https://provelo-test.coopiteasy.be/*
 // @grant    none
