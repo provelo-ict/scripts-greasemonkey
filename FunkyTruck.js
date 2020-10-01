@@ -1,8 +1,10 @@
 // ==UserScript==
 //@namespace https://www.provelo.org/
 // @name     FunkyTruckProVelo
-// @version  0.1.3
+// @version  0.1.4
 // @icon     https://www.provelo.org/favicon-32x32.png
+// @downloadURL  https://raw.githubusercontent.com/provelo-ict/scripts-greasemonkey/master/FunkyTruck.js
+// @updateURL https://raw.githubusercontent.com/provelo-ict/scripts-greasemonkey/master/FunkyTruck.js
 // @run-at document-idle
 // @description Shows wonderful trucks if a delivery is due for the Odoo activity
 // @match    https://gestion.provelo.org/*
