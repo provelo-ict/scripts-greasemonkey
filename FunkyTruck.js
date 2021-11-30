@@ -8,7 +8,7 @@
 // @run-at document-idle
 // @description Shows wonderful trucks if a delivery is due for the Odoo activity
 // @match    https://gestion.provelo.org/*
-// @match    https://provelo-test.coopiteasy.be/*
+// @match    https://provelo.test.coopiteasy.be/*
 // @grant    none
 // ==/UserScript==
 
