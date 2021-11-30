@@ -18,7 +18,7 @@ function modifImages() {
     var compteur = 0
     while (compteur < lignes.length) {
        if (lignes[compteur].lastChild.querySelectorAll('input[class="custom-control-input"]:checked').length > 0) { // C'est à dire si la dernière cellule de la ligne contient au moins une checkbox cochée.
-           lignes[compteur].lastChild.innerHTML = "<div class=\"fa fa-fw fa-truck fa-flip-horizontal\" style=\"color:#ADD8E6; font-size:xx-large\"></div>"; //On met la dernière cellule de la colonne comme une livraison.
+           lignes[compteur].lastChild.innerHTML = "<div class=\"fa fa-fw fa-truck fa-flip-horizontal\" style=\"color:#ADD8E6; font-size:x-large\"></div>"; //On met la dernière cellule de la colonne comme une livraison.
        }
          compteur = compteur + 1;
     };
