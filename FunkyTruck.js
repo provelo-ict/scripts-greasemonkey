@@ -1,7 +1,7 @@
 // ==UserScript==
 //@namespace https://www.provelo.org/
 // @name     FunkyTruckProVelo
-// @version  0.1.4
+// @version  0.2
 // @icon     https://www.provelo.org/favicon-32x32.png
 // @downloadURL  https://raw.githubusercontent.com/provelo-ict/scripts-greasemonkey/master/FunkyTruck.js
 // @updateURL https://raw.githubusercontent.com/provelo-ict/scripts-greasemonkey/master/FunkyTruck.js
@@ -14,23 +14,23 @@
 
 
 function modifImages() {
-    var champsBooleens = document.getElementsByClassName("oe_list_field_cell oe_list_field_boolean    ")
+    var lignes = document.getElementsByClassName("o_data_row")
+    var compteur = 0
+    while (compteur < lignes.length) {
+       if (lignes[compteur].lastChild.querySelectorAll('input[class="custom-control-input"]:checked').length > 0) { // C'est à dire si la dernière cellule de la ligne contient au moins une checkbox cochée.
+           lignes[compteur].lastChild.innerHTML = "<div class=\"fa fa-fw fa-truck fa-flip-horizontal\" style=\"color:#ADD8E6; font-size:xx-large\"></div>"; //On met la dernière cellule de la colonne comme une livraison.
+       }
+         compteur = compteur + 1;
+    };
+}
 
-    var x = 0;
+function lancerLamodif(){
     var fragmentid = window.location.hash.substr(1);
     if (fragmentid.match("model=resource.activity")){
         console.log("Loading truck images ⛟⛟ ");
-        while (x < champsBooleens.length) {
-            if ((champsBooleens[x].attributes["data-field"].nodeValue == "need_delivery") && (champsBooleens[x].childNodes[0].checked == true)) {
-                champsBooleens[x].innerHTML = "<div class=\"fa fa-fw fa-truck fa-flip-horizontal\" style=\"color:#ADD8E6; font-size:xx-large\"></div>";
-            }
-            x = x + 1;
+        modifImages();
         }
-    }
-   setTimeout(modifImages,3000); //Pour se relancer toutes les 3 secondes
-
+    setTimeout(lancerLamodif,3000); //Pour se relancer toutes les 3 secondes
 };
 
-
-
-    modifImages();
+lancerLamodif();
