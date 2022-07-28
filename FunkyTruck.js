@@ -1,6 +1,6 @@
 // ==UserScript==
-//@namespace https://www.provelo.org/
 // @name     FunkyTruckProVelo
+// @namespace https://www.provelo.org/
 // @version  0.2
 // @icon     https://www.provelo.org/favicon-32x32.png
 // @downloadURL  https://raw.githubusercontent.com/provelo-ict/scripts-greasemonkey/master/FunkyTruck.js
